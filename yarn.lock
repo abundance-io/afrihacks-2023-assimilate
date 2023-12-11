@@ -405,6 +405,11 @@
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.5.6.tgz#c65b2bfce1bec346582c07724e3f8c1017a20339"
   integrity sha512-dn1l8LaMea/IjDoHNd9J52uBbInB796CDffS6VdIxvqYCPSG0V0DzHp76GpaWnlhg88uYyPbXCDIowa86ybd5A==
 
+"@types/web-animations-js@^2.2.16":
+  version "2.2.16"
+  resolved "https://registry.yarnpkg.com/@types/web-animations-js/-/web-animations-js-2.2.16.tgz#fd84c49a7a2f148b588ba8b372496162b427742f"
+  integrity sha512-ATELeWMFwj8eQiH0KmvsCl1V2lu/qx/CjOBmv4ADSZS5u8r4reMyjCXtxG7khqyiwH3IOMNdrON/Ugn94OUcRA==
+
 "@typescript-eslint/eslint-plugin@^6.10.0":
   version "6.13.2"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-6.13.2.tgz#2e03506c5362a65e43cb132c37c9ce2d3cb51470"
@@ -1412,13 +1417,18 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-react-dom@^18.2.0:
+react-dom@>=18.2.0, react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-icons@^4.12.0:
+  version "4.12.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.12.0.tgz#54806159a966961bfd5cdb26e492f4dafd6a8d78"
+  integrity sha512-IBaDuHiShdZqmfc/TwHu6+d6k2ltNCf3AszxNmjJc1KUfXdEeRJOKyNvLmAHaarhzGmTSVygNdyu8/opXv2gaw==
 
 react-router-dom@^6.20.1:
   version "6.20.1"
@@ -1435,7 +1445,7 @@ react-router@6.20.1:
   dependencies:
     "@remix-run/router" "1.13.1"
 
-react@^18.2.0:
+react@>=18.2.0, react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -1657,6 +1667,22 @@ type-fest@^0.20.2:
   version "0.20.2"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.20.2.tgz#1bf207f4b28f91583666cb5fbd327887301cd5f4"
   integrity sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==
+
+typeit-react@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/typeit-react/-/typeit-react-2.7.0.tgz#f928563181ca65242ced2c98aa4e7ca21174e340"
+  integrity sha512-8Jq5RKZPUllZWSdvC4E2Of6qSyxp92xzH3B6bzq9NftLo39A7n8UDuPbd9k//0mKEc2jSKfl9tn5aQPNCVfTuQ==
+  dependencies:
+    react ">=18.2.0"
+    react-dom ">=18.2.0"
+    typeit "^8.8.0"
+
+typeit@^8.8.0:
+  version "8.8.0"
+  resolved "https://registry.yarnpkg.com/typeit/-/typeit-8.8.0.tgz#9def6390cf4dd886096657fc4557c875e44d8739"
+  integrity sha512-GQp6OW7vxro1HN3F7UPL0C2KzkGs8bFtUgmJSeK+xNhdofI40mkWxrBT2AXQwtS5Txkg7ttwplxvWCQxnUXyrw==
+  dependencies:
+    "@types/web-animations-js" "^2.2.16"
 
 typescript@^5.2.2:
   version "5.3.3"
