@@ -12,4 +12,4 @@ Assimilate plans to partner with schools and other educational institutions in o
 
 Future updates of Assimilate will include even more teacher-oriented features, allowing them to be more effective in their work and enhancing the impact they have on their students' lives.
 
-We can't wait to see you join in the vision we have for students 💜.
+We can't wait to see you join in the vision we have for students nationwide 💜
