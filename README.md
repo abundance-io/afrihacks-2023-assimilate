@@ -4,4 +4,4 @@ Assimilate is an attempt to solve the fundamental problem of "too many eager stu
 
 We want to try and make teachers' lives easier, while simultaneously giving each child well-needed attention. We utilise cutting-edge Generative AI models such as GPT-4, which allow interactiosn with students to encompass text, audio and other forms of media. We also make use of Anthropic's Claude 2.1 which has first-class support for tokenising [large sequences of text](www.anthropic.com/index/claude-2-1) -- making it invaluable to analysing student textbooks, info sheets, and more.
 
-Assimilate plans to partner with schools and other educational institutions in order to provide an even more immersive experience
+Assimilate plans to partner with schools and other educational institutions in order to provide an even more immersive experience for the student, by automatically surfacing local information that is relevant to the current conversation, such as current school sporting events, upcoming tests & assignments, as well as fun activites their classmates may be engaging in.
