@@ -1,14 +1,14 @@
 import MainSearch from "../components/MainSearch";
-import MainContainer from "../components/MainSearch";
+import MainContainer from "../components/MainContainer";
 import Sidebar from "../components/Sidebar";
+import { useMediaQuery } from "usehooks-ts";
 
 export default function HomePage() {
   return (
-    <div className="h-screen w-screen bg-[#0C0F0A] text-white flex">
-      <Sidebar />
+    <MainContainer>
       <div className="flex w-full items-center justify-center">
         <MainSearch />
       </div>
-    </div>
+    </MainContainer>
   );
 }
