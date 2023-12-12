@@ -8,7 +8,9 @@ import {
   FaSquare,
   FaSignInAlt,
 } from "react-icons/fa";
+import { useNavigate } from "react-router";
 export default function Sidebar() {
+  const navigate = useNavigate();
   return (
     <div className="h-screen w-[20%] bg-[#131810] border-r-[0.5px] border-[#464545] flex flex-col py-2">
       <div className="text-2xl flex items-center justify-center w-full">
@@ -24,27 +26,30 @@ export default function Sidebar() {
         />
       </div>
       <div className="flex flex-col w-full px-5 mt-8 gap-y-3">
-        <div className="flex items-center gap-x-2 text-[#d8d6d6] text-lg w-full cursor-pointer">
+        <div
+          className="flex items-center gap-x-2 text-[#d8d6d6] text-lg w-full cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           <FaSearch />
           Home
         </div>
 
-        <div className="flex items-center gap-x-2 text-[#777373] text-lg w-full cursor-pointer">
+        <div className="flex items-center gap-x-2 text-[#777373] hover:text-[#d8d6d6] text-lg w-full cursor-pointer">
           <FaCompass />
           Discover
         </div>
 
-        <div className="flex items-center gap-x-2 text-[#777373] text-lg w-full cursor-pointer">
+        <div className="flex items-center gap-x-2 text-[#777373] hover:text-[#d8d6d6]  text-lg w-full cursor-pointer">
           <FaSquare />
           Library
         </div>
 
-        <div className="flex items-center gap-x-2 text-[#777373] text-lg w-full cursor-pointer">
+        <div className="flex items-center gap-x-2 text-[#777373] hover:text-[#d8d6d6] text-lg w-full cursor-pointer">
           <FaSignInAlt />
           Login
         </div>
       </div>
-      <div className=" w-full items-center mt-[220px] px-5 text-[#777373]">
+      <div className=" w-full items-center mt-[220px] px-5 text-[#777373] hover:text-[#d8d6d6] ">
         <p>Assimilate is your AI university learning assistant..</p>
       </div>
     </div>

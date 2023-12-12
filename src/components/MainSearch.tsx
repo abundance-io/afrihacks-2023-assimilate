@@ -19,7 +19,7 @@ export default function MainSearch() {
   return (
     <div className="flex flex-col gap-y-7 items-center justify-center md:w-[60%] w-full mx-4">
       <p className="text-3xl">Learn Anything Now</p>
-      <div className="w-full h-[120px] bg-[#131810] rounded-lg border-2 border-[#464545] flex flex-col justify-between p-3 text-[#888F98]">
+      <div className="w-full h-[120px] bg-[#131810] rounded-lg border-2 border-[#464545] flex flex-col justify-between p-3 text-[#888F98] ">
         <input
           placeholder="Ask me anything..."
           className="w-full bg-[#131810] focus:outline-none"
@@ -37,14 +37,14 @@ export default function MainSearch() {
 
         <div className="flex justify-between items-center">
           <div className="flex text-sm gap-x-5">
-            <div className="flex center gap-x-1 justify-center rounded-full cursor-pointer">
-              <div className="flex items-center justify-center">
+            <div className="flex center gap-x-1 justify-center rounded-full cursor-pointer hover:text-[#d8d6d6]">
+              <div className="flex items-center justify-center ">
                 <FaSearch />
               </div>
               Focus
             </div>
 
-            <div className="flex center gap-x-1 justify-center rounded-full cursor-pointer">
+            <div className="flex center gap-x-1 justify-center rounded-full cursor-pointer hover:text-[#d8d6d6]">
               <div className="flex items-center justify-center">
                 <FaPlusCircle />
               </div>
