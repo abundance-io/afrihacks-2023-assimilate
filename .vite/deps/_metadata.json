@@ -1,0 +1,65 @@
+{
+  "hash": "ddc497f5",
+  "browserHash": "a9f3fccc",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "f3b133a7",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "5e31ffc3",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "44309ae2",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "4c43c8e9",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.esm.js",
+      "file": "react-icons_fa.js",
+      "fileHash": "58bf3be9",
+      "needsInterop": false
+    },
+    "usehooks-ts": {
+      "src": "../../node_modules/usehooks-ts/dist/esm/index.js",
+      "file": "usehooks-ts.js",
+      "fileHash": "3562d609",
+      "needsInterop": false
+    },
+    "react-icons/md": {
+      "src": "../../node_modules/react-icons/md/index.esm.js",
+      "file": "react-icons_md.js",
+      "fileHash": "5ff44113",
+      "needsInterop": false
+    },
+    "typeit-react": {
+      "src": "../../node_modules/typeit-react/dist/index.es.js",
+      "file": "typeit-react.js",
+      "fileHash": "6b9fc793",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-UWZXFKA6": {
+      "file": "chunk-UWZXFKA6.js"
+    },
+    "chunk-D3QZZX7K": {
+      "file": "chunk-D3QZZX7K.js"
+    },
+    "chunk-UPDK7Z2H": {
+      "file": "chunk-UPDK7Z2H.js"
+    }
+  }
+}

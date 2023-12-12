@@ -2,6 +2,8 @@ import { FaArrowUp, FaPlusCircle } from "react-icons/fa";
 import Sidebar from "../components/Sidebar";
 import ChatContainer from "../components/ChatContainer";
 import { useState } from "react";
+import MainContainer from "../components/MainContainer";
+import { useMediaQuery } from "usehooks-ts";
 
 const values = [
   {
@@ -20,18 +22,18 @@ const values = [
 export default function AnswerPage() {
   const [answers, setAnswers] = useState(values);
   const [Prompt, setPrompt] = useState("");
+  const viewSmall = useMediaQuery("(min-width: 768px)");
   return (
-    <div className="h-screen w-screen bg-[#0C0F0A] text-white flex">
-      <Sidebar />
-      <div className="flex flex-col w-full  justify-between p-10">
-        <div>
+    <MainContainer>
+      <div className="flex flex-col w-full h-[90%] md:h-full justify-between p-10 overflow-y-scroll">
+        <div className="overflow-y-scroll max-h-[400px]">
           <ChatContainer chats={answers} />
         </div>
-        <div className="w-[65%] rounded-full h-[80px] bg-[#131810] flex items-center justify-center overflow-hidden">
-          <div className="flex items-center justify-center gap-x-1 w-[98%] py-3 px-7 bg-[#131810] focus:outline-none  text-[#9ca3af] border-[#464545] border rounded-full h-[70%]">
+        <div className="md:w-[65%] h-[50px] md:my-0 my-5 rounded-full md:h-[80px] bg-[#131810] flex items-center justify-center overflow-hidden">
+          <div className="flex items-center justify-center gap-x-1 w-[98%] py-3 px-7 bg-[#131810] focus:outline-none  text-[#9ca3af] border-[#464545] md:border rounded-full md:h-[60px] h-[30px]">
             <FaPlusCircle />
             <input
-              className="w-[98%] py-3 px-3 bg-[#131810] focus:outline-none text-[#9ca3af] h-[70%]"
+              className="w-[98%]  py-3 px-3 bg-[#131810] focus:outline-none text-[#9ca3af] text-sm md:text-base"
               placeholder="Ask Follow-up question"
               onChange={(e) => {
                 setPrompt(e.target.value);
@@ -51,12 +53,16 @@ export default function AnswerPage() {
                 }
               }}
             />
-            <div className="bg-[#464545] h-7 w-7 rounded-full flex items-center justify-center cursor-pointer">
-              <FaArrowUp />
-            </div>
+            {viewSmall ? (
+              <div className="bg-[#464545] h-7 w-7 rounded-full flex items-center justify-center cursor-pointer">
+                <FaArrowUp />
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>
-    </div>
+    </MainContainer>
   );
 }

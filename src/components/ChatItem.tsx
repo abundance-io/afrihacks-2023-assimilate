@@ -14,7 +14,7 @@ export default function ChatItem(props: { data: ChatData }) {
           <FaFolder />
           <p className="">Sources</p>
         </div>
-        <div className="flex gap-x-3 w-full items-center">
+        <div className="flex gap-x-3 w-full items-center md:max-w-none max-w-[400px] overflow-x-scroll">
           {props.data.sources.map((source, index) => (
             <div
               key={index}

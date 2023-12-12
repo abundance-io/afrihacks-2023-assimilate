@@ -6,8 +6,10 @@ import { useMediaQuery } from "usehooks-ts";
 export default function HomePage() {
   return (
     <MainContainer>
-      <div className="flex w-full items-center justify-center">
-        <MainSearch />
+      <div className="flex w-full h-[90%] ">
+        <div className="flex w-full items-center justify-center">
+          <MainSearch />
+        </div>
       </div>
     </MainContainer>
   );
