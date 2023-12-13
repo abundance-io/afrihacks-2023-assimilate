@@ -44,7 +44,14 @@ export default function MainSearch() {
               Focus
             </div>
 
-            <div className="flex center gap-x-1 justify-center rounded-full cursor-pointer hover:text-[#d8d6d6]">
+            <div
+              className="flex center gap-x-1 justify-center rounded-full cursor-pointer hover:text-[#d8d6d6]"
+              onClick={() => {
+                const fileInput = document.createElement("input");
+                fileInput.type = "file";
+                fileInput.click();
+              }}
+            >
               <div className="flex items-center justify-center">
                 <FaPlusCircle />
               </div>
