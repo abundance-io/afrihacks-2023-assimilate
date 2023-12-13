@@ -2,15 +2,9 @@ import { ReactNode, useState } from "react";
 import { FaPlusCircle, FaArrowRight, FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 const recommends = [
-  "🗼 maybe try this",
-  "🚑 or mabybe try that",
-  "🚦 or maybe this",
-
-  "🗼 maybe try this",
-  "🚑 or mabybe try that",
-  "🚦 or maybe this",
-
-  "🗼 maybe try this",
+  "🗼 What is a Einstein's Theory of Relativity",
+  "🚑 What is a monad",
+  "🚦 How is the Y-Combinator",
 ];
 export default function MainSearch() {
   const navigate = useNavigate();

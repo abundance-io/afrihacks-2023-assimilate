@@ -53,14 +53,26 @@ function handleStudentQuery(input: string): ChatData {
         answer:
           "The structure of mitochondria includes an outer membrane, an inter-membrane space, an inner membrane, cristae, and a matrix, all of which play crucial roles in cellular respiration. You can find a diagram here: https://en.wikipedia.org/wiki/File:Mitochondrion_mini.svg",
       };
-    case "Can you reference my textbook on cellular respiration?":
+    case "can you reference my textbook on cellular respiration instead":
       return {
         title: "Textbook reference on mitochondria",
         sources: ["Cambridge IGCSE™ Biology 4th Edition (D G Mackean Dave Hayward).pdf"],
         answer:
-          "Sure, in Cambridge IGCSE™ Biology's chapter 2.1 on 'Cell structure and organisation', at page 72, it describes mitochondria as tiny organelles responsible for releasing energy from food substances through aerobic respiration.",
+          `Sure, in Cambridge IGCSE™ Biology's chapter 2.1 on 'Cell structure and organisation', at page 72: 
+              "Mitochondria are tiny organelles, which may appear<br>
+              slipper-shaped, circular or oval when viewed in section. In three
+              dimensions, they may be spherical, rod-like or extended. They
+              have an outer membrane and an inner membrane with many
+              inward-pointing folds. Mitochondria are most frequent in regions
+              of rapid chemical activity. They are responsible for releasing
+              energy from food substances through the process of aerobic
+              respiration (see Chapter 12).
+
+              Note that prokaryotes do not possess mitochondria in their
+              cytoplasm."
+          `,
       };
-    case "what are all of my upcoming assignments?":
+    case "what are my upcoming assignments?":
       return {
         title: "Upcoming assignments",
         sources: ["Winchester local activites"],
