@@ -31,7 +31,18 @@ export default function AnswerPage() {
         </div>
         <div className="md:w-[65%] h-[50px] md:my-0 my-5 rounded-full md:h-[80px] bg-[#131810] flex items-center justify-center overflow-hidden">
           <div className="flex items-center justify-center gap-x-1 w-[98%] py-3 px-7 bg-[#131810] focus:outline-none  text-[#9ca3af] border-[#464545] md:border rounded-full md:h-[60px] h-[30px]">
-            <FaPlusCircle />
+            <label htmlFor="file-upload" className="cursor-pointer">
+              <input
+                id="file-upload"
+                type="file"
+                style={{ display: "none" }}
+                onChange={(e) => {
+                  const file = e.target.files[0];
+                  // Handle the selected file here
+                }}
+              />
+              <FaPlusCircle />
+            </label>
             <input
               className="w-[98%]  py-3 px-3 bg-[#131810] focus:outline-none text-[#9ca3af] text-sm md:text-base"
               placeholder="Ask Follow-up question"
