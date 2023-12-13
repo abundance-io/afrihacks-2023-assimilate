@@ -5,6 +5,12 @@ import { useState } from "react";
 import MainContainer from "../components/MainContainer";
 import { useMediaQuery } from "usehooks-ts";
 
+interface ChatData {
+  title: string,
+  sources: string[],
+  answer: string
+}
+
 const values = [
   {
     title: "The first question",
@@ -17,10 +23,62 @@ const values = [
     answer:
       "this is a very long and convoluted answer to a question that seems really simple is the answer wrong just because its correct or are we just all tripping on a lot of things i'm not really real and you're not really fake this is AI we're talking about",
   },
+  {
+    title: "hi",
+    sources: [],
+    answer: "Hi, how can I help you today?"
+  },
+  {title: "help me with my biology homework on mitochondria ",}
 ];
 
+function handleStudentQuery(input: string): ChatData  {
+  switch (input) {
+    case "hi":
+      return {
+        title: "hi",
+        sources: [""],
+        answer: "Hi, how can I help you today?"
+      };
+    case "help me with my biology homework on mitochondria":
+      return {
+        title: "Mitochondria functions and structure",
+        sources: ["https://en.wikipedia.org/wiki/Mitochondrion"],
+        answer:
+          "Mitochondria are membrane-bound organelles responsible for generating most of the cell's supply of ATP, serving as a source of chemical energy. They consist of outer and inner membranes, cristae, inter-membrane space, and a matrix.",
+      };
+    case "tell me more about their structure?":
+      return {
+        title: "Mitochondria structure",
+        sources: ["https://en.wikipedia.org/wiki/Mitochondrion#Structure"],
+        answer:
+          "The structure of mitochondria includes an outer membrane, an inter-membrane space, an inner membrane, cristae, and a matrix, all of which play crucial roles in cellular respiration. You can find a diagram here: https://en.wikipedia.org/wiki/File:Mitochondrion_mini.svg",
+      };
+    case "Can you reference my textbook on cellular respiration?":
+      return {
+        title: "Textbook reference on mitochondria",
+        sources: ["Cambridge IGCSE™ Biology 4th Edition (D G Mackean Dave Hayward).pdf"],
+        answer:
+          "Sure, in Cambridge IGCSE™ Biology's chapter 2.1 on 'Cell structure and organisation', at page 72, it describes mitochondria as tiny organelles responsible for releasing energy from food substances through aerobic respiration.",
+      };
+    case "what are all of my upcoming assignments?":
+      return {
+        title: "Upcoming assignments",
+        sources: ["Winchester local activites"],
+        answer:
+          "Your upcoming assignments are Biology Homework due on Friday, Math Quiz next Monday, and English Essay at the end of next week.",
+      };
+    default:
+      return {
+        title: "Oops",
+        sources: [],
+        answer:
+          "Sorry, I can't help with that right now.",
+      };
+  }
+}
+
 export default function AnswerPage() {
-  const [answers, setAnswers] = useState(values);
+  const [answers, setAnswers] = useState([handleStudentQuery("hi")]);
   const [Prompt, setPrompt] = useState("");
   const viewSmall = useMediaQuery("(min-width: 768px)");
   return (
@@ -54,10 +112,7 @@ export default function AnswerPage() {
                 if (keyCode == "Enter") {
                   setAnswers([
                     ...answers,
-                    {
-                      ...answers[0],
-                      title: Prompt,
-                    },
+                    handleStudentQuery(Prompt)
                   ]);
 
                   setPrompt("");
