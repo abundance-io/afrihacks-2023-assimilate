@@ -28,15 +28,15 @@ const values = [
     sources: [],
     answer: "Hi, how can I help you today?"
   },
-  {title: "help me with my biology homework on mitochondria ",}
+  { title: "help me with my biology homework on mitochondria ", }
 ];
 
-function handleStudentQuery(input: string): ChatData  {
+function handleStudentQuery(input: string): ChatData {
   switch (input) {
     case "hi":
       return {
         title: "hi",
-        sources: [""],
+        sources: ["Cambridge IGCSE™ Biology 4th Edition (D G Mackean Dave Hayward).pdf"],
         answer: "Hi, how can I help you today?"
       };
     case "help me with my biology homework on mitochondria":
