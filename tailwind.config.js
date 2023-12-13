@@ -7,6 +7,9 @@ export default {
         sand: "#F5F5F5",
         dark: "#333333",
       },
+      fontFamily: {
+        sans: ["Fira Code"],
+      },
     },
   },
   plugins: [],
